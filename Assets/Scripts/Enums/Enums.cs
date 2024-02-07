@@ -1,3 +1,9 @@
+public enum InventoryLocation
+{
+    player,
+    chest,
+    count
+}
 public enum ToolEffect
 {
     none,
@@ -24,6 +30,7 @@ public enum ItemType
     Reaping_tool,
     Collecting_tool,
     Reapable_scenary,
+    Furniture,
     none,
     count
 }

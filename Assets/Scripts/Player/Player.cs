@@ -26,6 +26,8 @@ public class Player : SingletonMonobehaviour<Player>
     private bool isPickingDown;
     private ToolEffect toolEffect;
 
+    private Camera mainCamera;
+
     private Rigidbody2D rigidbody2d;
     private Direction playerDirection;
     private float movementSpeed;
@@ -36,6 +38,7 @@ public class Player : SingletonMonobehaviour<Player>
     {
         base.Awake();
         rigidbody2d = GetComponent<Rigidbody2D>();
+        mainCamera = Camera.main;
     }
 
     private void Update()
@@ -155,5 +158,11 @@ public class Player : SingletonMonobehaviour<Player>
             isIdle = false;
             movementSpeed = Settings.runningSpeed;
         }
+    }
+
+    public Vector3 GetPlayerViewportPosition()
+    {
+        // Vector3 viewport position for player ((0,0) viewport bottom left, (1,1) viewport top right
+        return mainCamera.WorldToViewportPoint(transform.position);
     }
 }
