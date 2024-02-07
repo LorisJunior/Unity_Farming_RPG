@@ -287,7 +287,7 @@ MonoBehaviour:
   - {fileID: 585568414}
   - {fileID: 329021495}
   - {fileID: 1094329895}
-  inventoryBarDraggedItem: {fileID: 0}
+  inventoryBarDraggedItem: {fileID: 6298740980992427948, guid: 5a9f93a2e23b7fd45bd1e639d0823481, type: 3}
 --- !u!114 &293517108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,6 +334,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 293517106}
     m_Modifications:
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: slotNumber
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 293517107}
     - target: {fileID: 3833438433179740543, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -447,6 +455,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 293517106}
     m_Modifications:
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: slotNumber
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 293517107}
     - target: {fileID: 3833438433179740543, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -560,6 +576,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 293517106}
     m_Modifications:
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: slotNumber
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 293517107}
     - target: {fileID: 3833438433179740543, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -885,6 +909,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 293517106}
     m_Modifications:
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: slotNumber
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 293517107}
     - target: {fileID: 3833438433179740543, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -998,6 +1030,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 293517106}
     m_Modifications:
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: slotNumber
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 293517107}
     - target: {fileID: 3833438433179740543, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1212,6 +1252,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 293517106}
     m_Modifications:
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: slotNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 293517107}
     - target: {fileID: 3833438433179740543, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1371,6 +1419,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 293517106}
     m_Modifications:
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: slotNumber
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 293517107}
     - target: {fileID: 3833438433179740543, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1484,6 +1540,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 293517106}
     m_Modifications:
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: slotNumber
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 293517107}
     - target: {fileID: 3833438433179740543, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1597,6 +1661,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 293517106}
     m_Modifications:
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: slotNumber
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 293517107}
     - target: {fileID: 3833438433179740543, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1742,6 +1814,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 293517106}
     m_Modifications:
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: slotNumber
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 293517107}
     - target: {fileID: 3833438433179740543, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1923,6 +2003,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 293517106}
     m_Modifications:
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: slotNumber
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 293517107}
     - target: {fileID: 3833438433179740543, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2276,6 +2364,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 293517106}
     m_Modifications:
+    - target: {fileID: 3810974360697987364, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 293517107}
     - target: {fileID: 3833438433179740543, guid: be8298d0ae4846c4399d5961fefa8362, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
