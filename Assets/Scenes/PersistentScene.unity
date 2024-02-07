@@ -287,6 +287,7 @@ MonoBehaviour:
   - {fileID: 585568414}
   - {fileID: 329021495}
   - {fileID: 1094329895}
+  inventoryBarDraggedItem: {fileID: 0}
 --- !u!114 &293517108
 MonoBehaviour:
   m_ObjectHideFlags: 0
