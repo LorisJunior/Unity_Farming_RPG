@@ -4,6 +4,7 @@ using UnityEngine;
 public class InventoryManager : SingletonMonobehaviour<InventoryManager>
 {
     private Dictionary<int, ItemDetails> itemDetailsDictionary;
+    private int[] selectedInventoryItem; // the index of the array is the inventory list, and the value is the item code
     public List<InventoryItem>[] inventoryLists;
     [HideInInspector] public int[] inventoryListCapacityIntArray;
     [SerializeField] private SO_ItemList itemList = null;
@@ -13,6 +14,12 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
         base.Awake();
         CreateInventoryLists();
         CreateItemDetailsDictionary();
+
+        selectedInventoryItem = new int[(int)InventoryLocation.count];
+        for (int i = 0; i < selectedInventoryItem.Length; i++)
+        {
+            selectedInventoryItem[i] = -1;
+        }
     }
 
 
@@ -112,6 +119,14 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
         }
     }
 
+    /// <summary>
+    ///  Clear the selected inventory item for inventoryLocation
+    /// </summary>
+    public void ClearSelectedInventoryItem(InventoryLocation inventoryLocation)
+    {
+        selectedInventoryItem[(int)inventoryLocation] = -1;
+    }
+
     public int FindItemInInventory(InventoryLocation inventoryLocation, int itemCode)
     {
         List<InventoryItem> inventoryList = inventoryLists[(int)inventoryLocation];
@@ -208,6 +223,11 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
         {
             inventoryList.RemoveAt(position);
         }
+    }
+
+    public void SetSelectedInventoryItem(InventoryLocation inventoryLocation, int itemCode)
+    {
+        selectedInventoryItem[(int)inventoryLocation] = itemCode;
     }
 
     /*private void DebugPrintInventoryList(List<InventoryItem> inventoryList)

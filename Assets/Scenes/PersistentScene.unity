@@ -2161,6 +2161,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e062bf4b6bc2e94d9f9a95cff7db975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1663518466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1663518467}
+  - component: {fileID: 1663518468}
+  m_Layer: 0
+  m_Name: CharacterCustomiser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1663518467
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663518466}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5643479329184906435}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1663518468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663518466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e38e0846fc736468a828c4b83e3aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 5518143507773054210}
+  soAnimationTypeArray:
+  - {fileID: 11400000, guid: 37b5d983bb4ef104f84710bf2083ecd1, type: 2}
+  - {fileID: 11400000, guid: f99835789cc044645a9140096c9d23e0, type: 2}
+  - {fileID: 11400000, guid: 1ef67d890771882439680c5920edc862, type: 2}
+  - {fileID: 11400000, guid: d1f4f55fb8c76454593399e581be676a, type: 2}
+  - {fileID: 11400000, guid: 08d2e612233221e40964832dd8926086, type: 2}
+  - {fileID: 11400000, guid: f62f3638c6a712744baae570a6c8ed6f, type: 2}
+  - {fileID: 11400000, guid: 68098a86c41e7624b9059d67ac043794, type: 2}
+  - {fileID: 11400000, guid: 26c47e10cf00b5442bd5c8814a622efb, type: 2}
+  - {fileID: 11400000, guid: dc0e8edd2af583643a3bb71c5cb63808, type: 2}
+  - {fileID: 11400000, guid: 5d3cbf9fd3d037343a51c4340a55a9f2, type: 2}
+  - {fileID: 11400000, guid: 00cd280decdd8644a887a738e2562480, type: 2}
+  - {fileID: 11400000, guid: 8b5509ee6ac5f104283fa9a6a4114990, type: 2}
+  - {fileID: 11400000, guid: 38e627f1cf71792408440bebd296266c, type: 2}
+  - {fileID: 11400000, guid: 111b53ecd9c66d049b5cc5da5abda900, type: 2}
+  - {fileID: 11400000, guid: 6b7bf2f8b40eec740a7a328f7790637e, type: 2}
+  - {fileID: 11400000, guid: 3c2c9726adadac145b642adfa0adbed4, type: 2}
+  - {fileID: 11400000, guid: 809a8c5e6d12d724dbfd5a37cc48df1c, type: 2}
+  - {fileID: 11400000, guid: 7e1696f0bd526a54fbde2626ca1b66d5, type: 2}
+  - {fileID: 11400000, guid: 22bb0769f38f62b488f4ca294c673df5, type: 2}
+  - {fileID: 11400000, guid: 70fe996c0582a8945979ddc7a6f77d58, type: 2}
+  - {fileID: 11400000, guid: 54443929259a43746b8b4eb2e201f39b, type: 2}
+  - {fileID: 11400000, guid: b8d188111c44d454aac66a34ce98f4d5, type: 2}
+  - {fileID: 11400000, guid: b7a25cd508616504eaa48ffc53059066, type: 2}
+  - {fileID: 11400000, guid: 961447c8768d30b41bc24e227432970b, type: 2}
 --- !u!1 &1675280131
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,7 +2768,7 @@ Transform:
   m_GameObject: {fileID: 2539532906086720002}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2821,6 +2891,7 @@ Transform:
   - {fileID: 3227385508650451031}
   - {fileID: 91976045364611921}
   - {fileID: 2850975387704209272}
+  - {fileID: 1663518467}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5643479329184906436
@@ -2835,6 +2906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d880bb9f8c23346438e98ddcb7bd8c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equippedItemSpriteRenderer: {fileID: 6938630949999705962}
 --- !u!50 &5643479329184906437
 Rigidbody2D:
   serializedVersion: 4

@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
+public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     private Camera mainCamera;
     private Canvas parentCanvas;
@@ -16,6 +16,7 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     [SerializeField] private UIInventoryBar inventoryBar = null;
     [SerializeField] private GameObject inventoryTextBoxPrefab = null;
+    [HideInInspector] public bool isSelected = false;
     [HideInInspector] public ItemDetails itemDetails;
     [SerializeField] private GameObject itemPrefab = null;
     [HideInInspector] public int itemQuantity;
@@ -31,10 +32,40 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         mainCamera = Camera.main;
         parentItem = GameObject.FindGameObjectWithTag(Tags.ItemsParentTransform).transform;
     }
+    /// <summary>
+    /// Sets this inventory slot item to be selected
+    /// </summary>
+    private void SetSelectedItem()
+    {
+        inventoryBar.ClearHighlightOnInventorySlots();
+        isSelected = true;
+        inventoryBar.SetHighlightedInventorySlots();
+        InventoryManager.Instance.SetSelectedInventoryItem(InventoryLocation.player, itemDetails.itemCode);
+
+        if (itemDetails.canBeCarried == true)
+        {
+            Player.Instance.ShowCarriedItem(itemDetails.itemCode);
+        }
+        else
+        {
+            Player.Instance.ClearCarriedItem();
+        }
+    }
+
+    private void ClearSelectedItem()
+    {
+        inventoryBar.ClearHighlightOnInventorySlots();
+
+        isSelected = false;
+
+        InventoryManager.Instance.ClearSelectedInventoryItem(InventoryLocation.player);
+
+        Player.Instance.ClearCarriedItem();
+    }
 
     private void DropSelectedItemAtMousePosition()
     {
-        if(itemDetails != null)
+        if(itemDetails != null && isSelected)
         {
             Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -mainCamera.transform.position.z));
 
@@ -45,6 +76,11 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
             // Remove item from players inventory
             InventoryManager.Instance.RemoveItem(InventoryLocation.player, item.ItemCode);
+
+            if (InventoryManager.Instance.FindItemInInventory(InventoryLocation.player, item.ItemCode) == -1)
+            {
+                ClearSelectedItem();
+            }
         }
     }
 
@@ -61,6 +97,8 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             // Get iamge for dragged item
             Image draggedItemImage = draggedItem.GetComponentInChildren<Image>();
             draggedItemImage.sprite = inventorySlotImage.sprite;
+
+            SetSelectedItem();
         }
     }
 
@@ -88,6 +126,8 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 InventoryManager.Instance.SwapInventoryItems(InventoryLocation.player, slotNumber, toSlotNumber);
 
                 DestroyInventoryTextBox();
+
+                ClearSelectedItem();
             }
             // else attempt to drop the item if it can be dropped
             else
@@ -98,6 +138,23 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 }
             }
             Player.Instance.EnablePlayerInput();
+        }
+    }
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Left)
+        {
+            if (isSelected == true)
+            {
+                ClearSelectedItem();
+            }
+            else
+            {
+                if (itemQuantity > 0)
+                {
+                    SetSelectedItem();
+                }
+            }
         }
     }
 
